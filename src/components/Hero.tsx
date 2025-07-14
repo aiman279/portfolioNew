@@ -62,7 +62,7 @@ const Hero = () => {
 
             {/* Resume Button */}
             <a
-              href="/resume-asmui.pdf"
+              href="public/resume-aiman.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
