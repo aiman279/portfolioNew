@@ -18,7 +18,7 @@ const Projects = () => {
       tech: ["PHP", "HTML", "CSS", "JAVASCRIPT", "SQL"],
       image: "public/transfer-system.png",
       gradient: "from-purple-500 to-pink-500",
-      github: "#",
+      github: "https://github.com/aiman279/Credit_Transfer_System",
       live: "#",
       featured: true,
     },
