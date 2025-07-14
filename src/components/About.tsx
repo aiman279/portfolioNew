@@ -1,8 +1,15 @@
-
 const About = () => {
   const skills = [
-    'React', 'TypeScript', 'Node.js', 'Python', 'JavaScript', 'HTML/CSS',
-    'Tailwind CSS', 'Next.js', 'MongoDB', 'PostgreSQL', 'Git', 'AWS'
+    "React",
+    "TypeScript",
+    "Python",
+    "JavaScript",
+    "HTML/CSS",
+    "Tailwind CSS",
+    "Firebase",
+    "Github",
+    "SQL",
+    "PHP",
   ];
 
   return (
@@ -21,21 +28,26 @@ const About = () => {
               <div className="text-6xl">👨‍💻</div>
             </div>
           </div>
-          
+
           <div className="space-y-6">
             <p className="text-lg text-gray-600 leading-relaxed">
-              I'm a passionate full-stack developer with over 5 years of experience building 
-              web applications that solve real-world problems. I love creating clean, efficient 
-              code and turning complex ideas into intuitive user experiences.
+              I’m a Software Engineering student at Universiti Kuala Lumpur MIIT
+              with a strong focus on full-stack development and user-centered
+              design. I enjoy creating digital solutions that are intuitive,
+              efficient, and built with attention to detail.
             </p>
-            
+
             <p className="text-lg text-gray-600 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or sharing my knowledge through blog posts and mentoring.
+              My experience across academic projects has helped me develop
+              skills in building responsive, high-performing applications. I’m
+              passionate about turning ideas into impactful user experiences
+              that solve real-world problems through clean and accessible code.
             </p>
 
             <div className="pt-6">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Skills & Technologies</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                Skills & Technologies
+              </h3>
               <div className="flex flex-wrap gap-3">
                 {skills.map((skill, index) => (
                   <span
