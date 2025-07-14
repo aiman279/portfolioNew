@@ -16,7 +16,7 @@ const Projects = () => {
       description:
         "Developed a web-based system to manage and process student credit transfer requests between academic institutions.",
       tech: ["PHP", "HTML", "CSS", "JAVASCRIPT", "SQL"],
-      image: "public/transfer-system.png",
+      image: "/transfer-system.png",
       gradient: "from-purple-500 to-pink-500",
       github: "https://github.com/aiman279/Credit_Transfer_System",
       live: "#",
@@ -27,7 +27,7 @@ const Projects = () => {
       description:
         "Built a responsive web application usong React.js for managing personal and team tasks.",
       tech: ["React", "Firebase", "Tailwind CSS"],
-      image: "public/task-management.png",
+      image: "/task-management.png",
       gradient: "from-purple-500 to-pink-500",
       github: "https://github.com/aiman279/Task-Management",
       live: "#",
