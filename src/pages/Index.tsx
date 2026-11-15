@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 /* Vertical connector with a numbered node, like the reference template */
 const Connector = ({ n }: { n: number }) => (
@@ -32,9 +32,11 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-center md:text-left">
             <p className="text-white font-medium">
-              <span className="font-mono-code text-teal">&lt;/&gt;</span> Muhamad Aiman Asmu'i Bin Mohd Shuaimi
+              <span className="font-mono-code text-teal">&lt;/&gt;</span> Aiman Asmu'i
             </p>
-            <p className="text-sm text-zinc-500">© 2025 Aiman Asmu'i. All rights reserved.</p>
+            <p className="text-sm text-zinc-500">
+              © {new Date().getFullYear()} Aiman Asmu'i. All rights reserved.
+            </p>
           </div>
           <div className="flex gap-5 text-zinc-400">
             <a href="https://github.com/aiman279" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -42,9 +44,6 @@ const Index = () => {
             </a>
             <a href="https://www.linkedin.com/in/aiman-asmui/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="hover:text-teal transition-colors" />
-            </a>
-            <a href="https://www.instagram.com/asmuieee._/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <Instagram className="hover:text-teal transition-colors" />
             </a>
             <a href="mailto:aimanasmui332@gmail.com" aria-label="Email">
               <Mail className="hover:text-teal transition-colors" />

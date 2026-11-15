@@ -22,7 +22,9 @@ const Navigation = () => {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top <= 120) current = id;
       }
-      setActive(current);
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.body.scrollHeight - 4;
+      setActive(atBottom ? "contact" : current);
     };
     onScroll();
     window.addEventListener("scroll", onScroll);

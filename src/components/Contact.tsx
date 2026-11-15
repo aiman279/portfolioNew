@@ -1,7 +1,30 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowUpRight } from "lucide-react";
 
-const inputClass =
-  "w-full px-4 py-3 rounded-lg bg-[#16181b] text-white placeholder:text-zinc-500 border border-white/15 focus:outline-none focus:border-[#2ee6b6] transition-colors duration-200";
+const EMAIL = "aimanasmui332@gmail.com";
+
+const channels = [
+  {
+    label: "Email",
+    value: EMAIL,
+    href: `mailto:${EMAIL}`,
+    icon: Mail,
+    external: false,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/aiman-asmui",
+    href: "https://www.linkedin.com/in/aiman-asmui/",
+    icon: Linkedin,
+    external: true,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/aiman279",
+    href: "https://github.com/aiman279",
+    icon: Github,
+    external: true,
+  },
+];
 
 const Contact = () => {
   return (
@@ -15,52 +38,49 @@ const Contact = () => {
           projects, or just having a friendly chat about technology.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
           <div className="space-y-5">
-            <div className="teal-card p-6 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border border-[#2ee6b6] text-teal flex items-center justify-center shrink-0">
-                <Mail size={20} />
-              </div>
-              <div className="min-w-0">
-                <p className="text-sm text-zinc-500">Email Me</p>
-                <a
-                  href="mailto:aimanasmui332@gmail.com"
-                  className="text-white font-medium hover:text-teal transition-colors break-all"
-                >
-                  aimanasmui332@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div className="teal-card p-6 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full border border-[#2ee6b6] text-teal flex items-center justify-center shrink-0">
-                <Phone size={20} />
-              </div>
-              <div>
-                <p className="text-sm text-zinc-500">Call Me</p>
-                <a
-                  href="tel:+60172209598"
-                  className="text-white font-medium hover:text-teal transition-colors"
-                >
-                  (+60) 17-220 9598
-                </a>
-              </div>
-            </div>
+            {channels.map(({ label, value, href, icon: Icon, external }) => (
+              <a
+                key={label}
+                href={href}
+                {...(external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+                className="teal-card p-5 flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-full border border-[#2ee6b6] text-teal flex items-center justify-center shrink-0">
+                  <Icon size={20} />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm text-zinc-500">{label}</p>
+                  <p className="text-white font-medium truncate group-hover:text-teal transition-colors">
+                    {value}
+                  </p>
+                </div>
+                <ArrowUpRight
+                  size={18}
+                  className="text-zinc-500 group-hover:text-teal transition-colors shrink-0"
+                />
+              </a>
+            ))}
           </div>
 
-          <form className="teal-card p-6 space-y-4">
-            <input type="text" id="name" className={inputClass} placeholder="Your name" />
-            <input type="email" id="email" className={inputClass} placeholder="your.email@example.com" />
-            <textarea
-              id="message"
-              rows={4}
-              className={`${inputClass} resize-none`}
-              placeholder="Tell me about your project or just say hello!"
-            ></textarea>
-            <button type="submit" className="btn-teal w-full">
-              Send Message
-            </button>
-          </form>
+          <div className="teal-card p-8 flex flex-col justify-center text-center md:text-left">
+            <h3 className="text-2xl font-semibold text-white mb-3">
+              Let's work <span className="text-teal">together</span>
+            </h3>
+            <p className="text-zinc-400 leading-relaxed mb-8">
+              Whether you have a project in mind, want to collaborate, or just
+              want to say hello, send me an email and I'll get back to you as
+              soon as possible.
+            </p>
+            <div>
+              <a href={`mailto:${EMAIL}`} className="btn-teal inline-block">
+                Email me
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
