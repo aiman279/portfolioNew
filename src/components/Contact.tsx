@@ -34,12 +34,11 @@ const Contact = () => {
           Get In <span className="text-teal">Touch</span>
         </h2>
         <p className="text-center text-zinc-400 mb-14 max-w-xl mx-auto">
-          I'm always open to discussing new opportunities, interesting
-          projects, or just having a friendly chat about technology.
+          Have a website or web app in mind? I'm available for freelance projects and happy to talk through your idea.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="space-y-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <div className="space-y-5 min-w-0">
             {channels.map(({ label, value, href, icon: Icon, external }) => (
               <a
                 key={label}
@@ -66,18 +65,20 @@ const Contact = () => {
             ))}
           </div>
 
-          <div className="teal-card p-8 flex flex-col justify-center text-center md:text-left">
+          <div className="teal-card p-8 flex flex-col justify-center text-center md:text-left min-w-0">
             <h3 className="text-2xl font-semibold text-white mb-3">
-              Let's work <span className="text-teal">together</span>
+              Let's build <span className="text-teal">your project</span>
             </h3>
             <p className="text-zinc-400 leading-relaxed mb-8">
-              Whether you have a project in mind, want to collaborate, or just
-              want to say hello, send me an email and I'll get back to you as
-              soon as possible.
+              Tell me what you want to build, who it is for and when you need it.
+              Send me an email and I'll reply with questions or a quote.
             </p>
             <div>
-              <a href={`mailto:${EMAIL}`} className="btn-teal inline-block">
-                Email me
+              <a
+                href={`mailto:${EMAIL}?subject=Project%20enquiry`}
+                className="btn-teal inline-block"
+              >
+                Get a quote
               </a>
             </div>
           </div>

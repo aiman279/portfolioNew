@@ -35,7 +35,7 @@ const Hero = () => {
               </div>
               <h3 className="text-lg font-semibold text-white">Aiman Asmu'i</h3>
               <p className="text-sm text-zinc-400 mb-4">
-                Software Engineer
+                Full-Stack Web Developer
               </p>
               <div className="flex gap-2">
                 <a href="https://github.com/aiman279" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-lg border border-white/15 hover:border-[#2ee6b6] hover:text-teal transition-colors">
@@ -53,18 +53,22 @@ const Hero = () => {
 
           {/* Intro */}
           <div className="lg:col-span-5 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-5 rounded-full border border-[#2ee6b6]/40 text-sm text-teal">
+              <span className="w-2 h-2 rounded-full bg-[#2ee6b6] animate-pulse"></span>
+              Available for freelance projects
+            </div>
             <p className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-4">
               Hey, I'm <span className="text-teal">Aiman</span>,
               <br />
-              Full-Stack Developer
+              Full-Stack Web Developer
             </p>
             <p className="text-zinc-400 leading-relaxed mb-8">
-              I love creating clean, efficient code and turning complex ideas
-              into intuitive user experiences.
+              I build fast, clean websites and web apps for small businesses and
+              individuals, from first idea to launch.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-3">
               <button onClick={() => go("contact")} className="btn-teal">
-                Let's Talk
+                Get a quote
               </button>
               <a
                 href="/resume-aiman.pdf"

@@ -1,6 +1,7 @@
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Services from "../components/Services";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -24,8 +25,10 @@ const Index = () => {
       <Connector n={0} />
       <About />
       <Connector n={1} />
-      <Projects />
+      <Services />
       <Connector n={2} />
+      <Projects />
+      <Connector n={3} />
       <Contact />
 
       <footer className="border-t border-white/10 py-8 bg-[#16181b]">

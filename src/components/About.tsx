@@ -39,7 +39,7 @@ const About = () => {
                 </p>
                 <p className="pl-5">
                   <span className="text-zinc-500">role:</span>{" "}
-                  <span className="text-amber-300">"Full-Stack Developer"</span>,
+                  <span className="text-amber-300">"Full-Stack Web Developer"</span>,
                 </p>
                 <p className="pl-5">
                   <span className="text-zinc-500">building:</span>{" "}
@@ -51,8 +51,8 @@ const About = () => {
                 </p>
                 <p>{"}"}</p>
                 <p className="mt-4 font-sans text-[15px] leading-relaxed text-zinc-400">
-                  I’m a software engineer with a strong focus on full-stack
-                  development and user-centered design. I enjoy creating digital
+                  I’m a full-stack web developer with a strong focus on clean code
+                  and user-centered design. I enjoy creating digital
                   solutions that are intuitive, efficient, and built with
                   attention to detail.
                 </p>
