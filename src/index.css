@@ -7,9 +7,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light;
-  color: #141414;
-  background-color: #f4f1ea;
+  color-scheme: dark;
+  color: #d7dde3;
+  background-color: #16181b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -130,36 +130,53 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #f4f1ea;
-    color: #141414;
-    font-family: "Inter", system-ui, sans-serif;
+    background-color: #16181b;
+    color: #d7dde3;
+    font-family: "Poppins", system-ui, sans-serif;
   }
   ::selection {
-    background: #ff4d2e;
-    color: #fff;
+    background: #2ee6b6;
+    color: #0b1512;
   }
 }
 
-/* ---- Editorial style ---- */
-.font-serif-display {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+/* ---- Dev / teal style ---- */
+.font-mono-code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
 }
 
-.accent {
-  color: #ff4d2e;
+.text-teal {
+  color: #2ee6b6;
 }
 
-.link-underline {
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0% 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 300ms ease;
+.bg-topo {
+  background-image: url("/topo.svg");
+  background-size: 900px 900px;
+  background-position: center;
 }
-.link-underline:hover {
-  background-size: 100% 1px;
+
+.teal-card {
+  background: #1c1f23;
+  border: 1px solid rgb(46 230 182 / 0.35);
+  border-radius: 1.25rem;
+  transition: border-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+.teal-card:hover {
+  border-color: #2ee6b6;
+  box-shadow: 0 0 30px -10px rgb(46 230 182 / 0.55);
+}
+
+.btn-teal {
+  border: 1.5px solid #2ee6b6;
+  color: #2ee6b6;
+  border-radius: 9999px;
+  padding: 0.7rem 1.75rem;
+  font-weight: 500;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.btn-teal:hover {
+  background: #2ee6b6;
+  color: #0b1512;
 }
 
 @keyframes fade-in {

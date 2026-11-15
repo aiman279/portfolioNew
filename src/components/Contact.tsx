@@ -1,72 +1,64 @@
-import { ArrowUpRight } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const inputClass =
-  "w-full bg-transparent border-b border-black/30 py-3 placeholder:text-black/40 focus:outline-none focus:border-[#ff4d2e] transition-colors duration-200";
+  "w-full px-4 py-3 rounded-lg bg-[#16181b] text-white placeholder:text-zinc-500 border border-white/15 focus:outline-none focus:border-[#2ee6b6] transition-colors duration-200";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-28 bg-[#f4f1ea] border-t border-black/10">
-      <div className="max-w-6xl mx-auto px-6">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] accent mb-10">
-          03 — Contact
+    <section id="contact" className="py-24 bg-topo">
+      <div className="max-w-5xl mx-auto px-6">
+        <h2 className="text-center text-4xl sm:text-5xl font-light text-white mb-4">
+          Get In <span className="text-teal">Touch</span>
+        </h2>
+        <p className="text-center text-zinc-400 mb-14 max-w-xl mx-auto">
+          I'm always open to discussing new opportunities, interesting
+          projects, or just having a friendly chat about technology.
         </p>
 
-        <div className="grid lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-7">
-            <h2 className="font-serif-display text-5xl sm:text-7xl leading-[1] mb-10">
-              Let's work <span className="italic accent">together.</span>
-            </h2>
-            <p className="text-lg text-black/70 max-w-lg leading-relaxed mb-10">
-              I'm always open to discussing new opportunities, interesting
-              projects, or just having a friendly chat about technology.
-            </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-5">
+            <div className="teal-card p-6 flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-[#2ee6b6] text-teal flex items-center justify-center shrink-0">
+                <Mail size={20} />
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm text-zinc-500">Email Me</p>
+                <a
+                  href="mailto:aimanasmui332@gmail.com"
+                  className="text-white font-medium hover:text-teal transition-colors break-all"
+                >
+                  aimanasmui332@gmail.com
+                </a>
+              </div>
+            </div>
 
-            <div className="space-y-4">
-              <a
-                href="mailto:aimanasmui332@gmail.com"
-                className="group flex items-center gap-2 font-serif-display text-3xl sm:text-4xl hover:text-[#ff4d2e] transition-colors"
-              >
-                aimanasmui332@gmail.com
-                <ArrowUpRight className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </a>
-              <a
-                href="tel:+60172209598"
-                className="block text-lg text-black/70 link-underline w-fit"
-              >
-                (+60) 17-220 9598
-              </a>
+            <div className="teal-card p-6 flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full border border-[#2ee6b6] text-teal flex items-center justify-center shrink-0">
+                <Phone size={20} />
+              </div>
+              <div>
+                <p className="text-sm text-zinc-500">Call Me</p>
+                <a
+                  href="tel:+60172209598"
+                  className="text-white font-medium hover:text-teal transition-colors"
+                >
+                  (+60) 17-220 9598
+                </a>
+              </div>
             </div>
           </div>
 
-          <form className="lg:col-span-5 space-y-8">
-            <div>
-              <label htmlFor="name" className="text-xs uppercase tracking-[0.2em] text-black/50">
-                Name
-              </label>
-              <input type="text" id="name" className={inputClass} placeholder="Your name" />
-            </div>
-            <div>
-              <label htmlFor="email" className="text-xs uppercase tracking-[0.2em] text-black/50">
-                Email
-              </label>
-              <input type="email" id="email" className={inputClass} placeholder="you@example.com" />
-            </div>
-            <div>
-              <label htmlFor="message" className="text-xs uppercase tracking-[0.2em] text-black/50">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                className={`${inputClass} resize-none`}
-                placeholder="Tell me about your project"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="px-8 py-4 rounded-full bg-[#141414] text-[#f4f1ea] font-medium hover:bg-[#ff4d2e] transition-colors duration-200"
-            >
-              Send message
+          <form className="teal-card p-6 space-y-4">
+            <input type="text" id="name" className={inputClass} placeholder="Your name" />
+            <input type="email" id="email" className={inputClass} placeholder="your.email@example.com" />
+            <textarea
+              id="message"
+              rows={4}
+              className={`${inputClass} resize-none`}
+              placeholder="Tell me about your project or just say hello!"
+            ></textarea>
+            <button type="submit" className="btn-teal w-full">
+              Send Message
             </button>
           </form>
         </div>
