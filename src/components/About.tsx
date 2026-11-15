@@ -42,8 +42,8 @@ const About = () => {
                   <span className="text-amber-300">"Full-Stack Developer"</span>,
                 </p>
                 <p className="pl-5">
-                  <span className="text-zinc-500">studying:</span>{" "}
-                  <span className="text-amber-300">"Software Engineering @ UniKL MIIT"</span>,
+                  <span className="text-zinc-500">building:</span>{" "}
+                  <span className="text-amber-300">"web & mobile apps"</span>,
                 </p>
                 <p className="pl-5">
                   <span className="text-zinc-500">focus:</span>{" "}
@@ -51,14 +51,15 @@ const About = () => {
                 </p>
                 <p>{"}"}</p>
                 <p className="mt-4 font-sans text-[15px] leading-relaxed text-zinc-400">
-                  I’m a Software Engineering student at Universiti Kuala Lumpur
-                  MIIT with a strong focus on full-stack development and
-                  user-centered design. I enjoy creating digital solutions that
-                  are intuitive, efficient, and built with attention to detail.
+                  I’m a software engineer with a strong focus on full-stack
+                  development and user-centered design. I enjoy creating digital
+                  solutions that are intuitive, efficient, and built with
+                  attention to detail.
                 </p>
                 <p className="mt-3 font-sans text-[15px] leading-relaxed text-zinc-400">
-                  My experience across academic projects has helped me develop
-                  skills in building responsive, high-performing applications.
+                  My experience across real-world and personal projects has
+                  helped me develop skills in building responsive,
+                  high-performing applications.
                   I’m passionate about turning ideas into impactful user
                   experiences that solve real-world problems through clean and
                   accessible code.

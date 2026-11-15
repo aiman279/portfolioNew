@@ -35,7 +35,7 @@ const Hero = () => {
               </div>
               <h3 className="text-lg font-semibold text-white">Aiman Asmu'i</h3>
               <p className="text-sm text-zinc-400 mb-4">
-                Software Engineering Student
+                Software Engineer
               </p>
               <div className="flex gap-2">
                 <a href="https://github.com/aiman279" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-lg border border-white/15 hover:border-[#2ee6b6] hover:text-teal transition-colors">
