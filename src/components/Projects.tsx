@@ -2,6 +2,15 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    title: "BarberBook",
+    description:
+      "A booking system for barbershops. Customers pick a service, barber and free time slot, and the shop manages bookings and services from an admin dashboard.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    image: "✂️",
+    github: "https://github.com/aiman279/barberbook",
+    live: "#",
+  },
+  {
     title: "Atlas (North OS)",
     description:
       "An AI-powered personal life operating system to track life balance, goals, knowledge and yearly evolution in one place.",
@@ -18,15 +27,6 @@ const projects = [
     image: "💰",
     github: "https://github.com/aiman279/asmui-vault",
     live: "https://asmui-vault-three.vercel.app",
-  },
-  {
-    title: "LifeFlow",
-    description:
-      "A full-stack personal operating system for schedules, routines and reminders, with browser push notifications and weekly review insights.",
-    tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "PWA"],
-    image: "⏰",
-    github: "https://github.com/aiman279/lifeflow",
-    live: "#",
   },
   {
     title: "BookItSports (FYP)",
