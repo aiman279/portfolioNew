@@ -1,4 +1,4 @@
-import { FileText, ArrowDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
   const scrollTo = (id: string) =>
@@ -7,87 +7,55 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen flex items-center justify-center bg-[#07070b] pt-16"
+      className="min-h-screen flex items-center pt-24 pb-16 bg-[#f4f1ea]"
     >
-      {/* Grid + neon glows */}
-      <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"></div>
-      <div className="absolute -top-32 left-1/4 w-[28rem] h-[28rem] bg-violet-600/25 rounded-full blur-[120px]"></div>
-      <div className="absolute -bottom-32 right-1/4 w-[28rem] h-[28rem] bg-cyan-500/20 rounded-full blur-[120px]"></div>
+      <div className="max-w-6xl mx-auto px-6 w-full grid lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-7 animate-fade-in">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-black/60 mb-8">
+            Full Stack Developer — Software Engineering Student
+          </p>
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="animate-fade-in">
-          {/* Profile image with glowing ring */}
-          <div className="w-44 h-44 mx-auto mb-8 rounded-full p-[3px] bg-gradient-to-br from-violet-400 to-cyan-300 shadow-[0_0_60px_-10px_rgba(139,92,246,0.7)]">
-            <img
-              src="/aiman_asmui.jpg"
-              alt="Aiman Asmu'i"
-              className="w-full h-full object-cover rounded-full border-4 border-[#07070b]"
-            />
-          </div>
-
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full glass text-sm text-zinc-300">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Software Engineering Student
-          </div>
-
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
-            Hi, I'm <span className="text-gradient">Aiman Asmu'i</span>
+          <h1 className="font-serif-display text-[clamp(3.5rem,10vw,8rem)] leading-[0.95] mb-8">
+            Aiman
+            <br />
+            <span className="italic accent">Asmu'i</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl text-zinc-400 mb-3 font-medium">
-            Full Stack Developer
-          </p>
-          <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-black/70 max-w-xl leading-relaxed mb-10">
             I love creating clean, efficient code and turning complex ideas into
             intuitive user experiences.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {["React", "TypeScript", "Next.js", "Flutter", "Firebase", "PostgreSQL"].map(
-              (t) => (
-                <span
-                  key={t}
-                  className="px-3 py-1 text-sm font-medium rounded-full glass text-zinc-300"
-                >
-                  {t}
-                </span>
-              )
-            )}
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-wrap items-center gap-4">
             <button
               onClick={() => scrollTo("projects")}
-              className="px-8 py-4 bg-gradient-to-r from-violet-500 to-cyan-400 text-[#07070b] rounded-full font-bold hover:shadow-[0_0_40px_-5px_rgba(139,92,246,0.8)] hover:scale-105 transition-all duration-200"
+              className="group inline-flex items-center gap-2 px-7 py-4 rounded-full bg-[#141414] text-[#f4f1ea] font-medium hover:bg-[#ff4d2e] transition-colors duration-200"
             >
-              View My Work
+              See my work
+              <ArrowUpRight
+                size={18}
+                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
             </button>
             <button
               onClick={() => scrollTo("contact")}
-              className="px-8 py-4 glass text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-200"
+              className="link-underline font-medium py-2"
             >
-              Get In Touch
+              Get in touch
             </button>
-            <a
-              href="/resume-aiman.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="flex items-center gap-2 px-6 py-4 glass text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-200"
-            >
-              <FileText className="w-5 h-5" />
-              View CV
-            </a>
           </div>
         </div>
 
-        <button
-          onClick={() => scrollTo("about")}
-          className="mt-16 text-zinc-500 hover:text-white animate-bounce transition-colors"
-          aria-label="Scroll to about"
-        >
-          <ArrowDown className="mx-auto" />
-        </button>
+        <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-in">
+          <div className="relative">
+            <div className="absolute -bottom-4 -right-4 w-full h-full rounded-t-[999px] rounded-b-3xl bg-[#ff4d2e]"></div>
+            <img
+              src="/aiman_asmui.jpg"
+              alt="Aiman Asmu'i"
+              className="relative w-72 h-96 sm:w-80 sm:h-[28rem] object-cover rounded-t-[999px] rounded-b-3xl border-2 border-[#141414] bg-white"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
