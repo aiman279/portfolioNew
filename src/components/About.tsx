@@ -71,9 +71,9 @@ const About = () => {
               <div className="relative">
                 <div className="absolute -inset-3 rounded-3xl border border-[#2ee6b6]/40"></div>
                 <img
-                  src="/aiman_asmui.jpg"
+                  src="/avatar.svg"
                   alt="Aiman Asmu'i"
-                  className="relative w-72 h-80 sm:w-80 sm:h-96 object-cover object-top rounded-2xl bg-white"
+                  className="relative w-72 h-80 sm:w-80 sm:h-96 object-cover object-center rounded-2xl bg-[#14403a]"
                 />
               </div>
             </div>

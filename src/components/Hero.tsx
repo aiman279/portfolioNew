@@ -26,11 +26,11 @@ const Hero = () => {
           {/* Profile card */}
           <div className="lg:col-span-4 flex justify-center">
             <div className="teal-card p-5 w-72">
-              <div className="rounded-xl overflow-hidden bg-white aspect-square mb-4">
+              <div className="rounded-xl overflow-hidden bg-[#14403a] aspect-square mb-4">
                 <img
-                  src="/aiman_asmui.jpg"
+                  src="/avatar.svg"
                   alt="Aiman Asmu'i"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <h3 className="text-lg font-semibold text-white">Aiman Asmu'i</h3>
