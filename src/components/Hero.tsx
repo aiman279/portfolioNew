@@ -1,72 +1,79 @@
-import { FileText } from "lucide-react";
+import { FileText, ArrowDown } from "lucide-react";
 
 const Hero = () => {
+  const scrollTo = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16"
+      className="relative overflow-hidden min-h-screen flex items-center justify-center bg-[#07070b] pt-16"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Grid + neon glows */}
+      <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"></div>
+      <div className="absolute -top-32 left-1/4 w-[28rem] h-[28rem] bg-violet-600/25 rounded-full blur-[120px]"></div>
+      <div className="absolute -bottom-32 right-1/4 w-[28rem] h-[28rem] bg-cyan-500/20 rounded-full blur-[120px]"></div>
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
-          {/* Circular Profile Image */}
-          <div className="w-52 h-52 mx-auto mb-8 rounded-full ring-4 ring-border shadow-xl overflow-hidden">
+          {/* Profile image with glowing ring */}
+          <div className="w-44 h-44 mx-auto mb-8 rounded-full p-[3px] bg-gradient-to-br from-violet-400 to-cyan-300 shadow-[0_0_60px_-10px_rgba(139,92,246,0.7)]">
             <img
               src="/aiman_asmui.jpg"
               alt="Aiman Asmu'i"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-full border-4 border-[#07070b]"
             />
           </div>
 
-          {/* Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Aiman Asmu'i
-            </span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full glass text-sm text-zinc-300">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Software Engineering Student
+          </div>
+
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+            Hi, I'm <span className="text-gradient">Aiman Asmu'i</span>
           </h1>
 
-          <h1 className="text-2xl sm:text-3xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Software Engineering Student | Full Stack Developer
-          </h1>
-          <p className="text-xl sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            {" "}
+          <p className="text-xl sm:text-2xl text-zinc-400 mb-3 font-medium">
+            Full Stack Developer
+          </p>
+          <p className="text-lg text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
             I love creating clean, efficient code and turning complex ideas into
             intuitive user experiences.
           </p>
 
-          {/* Buttons */}
+          <div className="flex flex-wrap justify-center gap-2 mb-10">
+            {["React", "TypeScript", "Next.js", "Flutter", "Firebase", "PostgreSQL"].map(
+              (t) => (
+                <span
+                  key={t}
+                  className="px-3 py-1 text-sm font-medium rounded-full glass text-zinc-300"
+                >
+                  {t}
+                </span>
+              )
+            )}
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            {/* View My Work */}
             <button
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+              onClick={() => scrollTo("projects")}
+              className="px-8 py-4 bg-gradient-to-r from-violet-500 to-cyan-400 text-[#07070b] rounded-full font-bold hover:shadow-[0_0_40px_-5px_rgba(139,92,246,0.8)] hover:scale-105 transition-all duration-200"
             >
               View My Work
             </button>
-
-            {/* Get In Touch */}
             <button
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="px-8 py-4 border-2 border-border text-foreground rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-200"
+              onClick={() => scrollTo("contact")}
+              className="px-8 py-4 glass text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-200"
             >
               Get In Touch
             </button>
-
-            {/* Resume Button */}
             <a
               href="/resume-aiman.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
-              className="flex items-center gap-2 px-6 py-4 border-2 border-border text-foreground rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 hover:shadow-md hover:scale-105 transition-all duration-200"
+              className="flex items-center gap-2 px-6 py-4 glass text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-200"
             >
               <FileText className="w-5 h-5" />
               View CV
@@ -74,12 +81,13 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="mt-16 animate-bounce">
-          <div className="w-8 h-8 border-2 border-border rounded-full mx-auto flex items-center justify-center">
-            <div className="w-2 h-2 bg-border rounded-full animate-pulse"></div>
-          </div>
-        </div>
+        <button
+          onClick={() => scrollTo("about")}
+          className="mt-16 text-zinc-500 hover:text-white animate-bounce transition-colors"
+          aria-label="Scroll to about"
+        >
+          <ArrowDown className="mx-auto" />
+        </button>
       </div>
     </section>
   );

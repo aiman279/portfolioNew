@@ -16,7 +16,7 @@ const Index = () => {
       <Contact />
       
       {/* Footer */}
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-[#050509] border-t border-white/10 text-white py-8">
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
       {/* Left: Name + Role */}
@@ -42,7 +42,7 @@ const Index = () => {
       </div>
     </div>
 
-    <hr className="my-6 border-gray-700" />
+    <hr className="my-6 border-white/10" />
 
     <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
       <p>© 2025 Aiman Asmu'i. All rights reserved.</p>

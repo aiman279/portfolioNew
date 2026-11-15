@@ -6,10 +6,9 @@ const Projects = () => {
         "Built an AI-powered personal life operating system to track life balance, goals, knowledge and yearly evolution in one place.",
       tech: ["React", "TypeScript", "Vite", "Framer Motion"],
       image: "🧭",
-      gradient: "from-indigo-500 to-blue-500",
+      gradient: "from-indigo-500/40 to-blue-500/20",
       github: "https://github.com/aiman279/atlas",
       live: "https://atlas-orcin-beta.vercel.app",
-      featured: true,
     },
     {
       title: "ASMU'I VAULT",
@@ -17,10 +16,9 @@ const Projects = () => {
         "Built a minimalist installable (PWA) money tracker with income, expenses, savings goals and a dedicated Grab earnings tracker.",
       tech: ["React", "TypeScript", "Vite", "PWA"],
       image: "💰",
-      gradient: "from-emerald-500 to-teal-500",
+      gradient: "from-emerald-500/40 to-teal-500/20",
       github: "https://github.com/aiman279/asmui-vault",
       live: "https://asmui-vault-three.vercel.app",
-      featured: true,
     },
     {
       title: "LIFEFLOW",
@@ -28,10 +26,9 @@ const Projects = () => {
         "Built a full-stack personal operating system for schedules, routines and reminders, with browser push notifications and weekly review insights.",
       tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "PWA"],
       image: "⏰",
-      gradient: "from-orange-500 to-rose-500",
+      gradient: "from-orange-500/40 to-rose-500/20",
       github: "https://github.com/aiman279/lifeflow",
       live: "#",
-      featured: true,
     },
     {
       title: "BOOKITSPORTS (FYP Project)",
@@ -39,10 +36,9 @@ const Projects = () => {
         "Developed a responsive web and mobile application to streamline booking and management of sports facilities.",
       tech: ["React", "Tailwind CSS", "Flutter (Dart)", "Firebase"],
       image: "/booksports.png",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-blue-500/40 to-cyan-500/20",
       github: "https://github.com/aiman279/BOOKITSPORTS_FYP-WEB",
       live: "#",
-      featured: true,
     },
     {
       title: "CREDIT TRANSFER SYSTEM FOR UNIVERSITY",
@@ -50,10 +46,9 @@ const Projects = () => {
         "Developed a web-based system to manage and process student credit transfer requests between academic institutions.",
       tech: ["PHP", "HTML", "CSS", "JAVASCRIPT", "SQL"],
       image: "/transfer-system.png",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-purple-500/40 to-pink-500/20",
       github: "https://github.com/aiman279/Credit_Transfer_System",
       live: "#",
-      featured: true,
     },
     {
       title: "TASK LOVE",
@@ -61,105 +56,99 @@ const Projects = () => {
         "Built a responsive web application using React.js for managing personal and team tasks.",
       tech: ["React", "Firebase", "Tailwind CSS"],
       image: "/task-management.png",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-fuchsia-500/40 to-violet-500/20",
       github: "https://github.com/aiman279/Task-Management",
       live: "#",
-      featured: true,
     },
   ];
 
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-br from-gray-50 via-blue-50/50 to-purple-50/50 relative overflow-hidden"
+      className="relative py-24 bg-[#07070b] overflow-hidden"
     >
-      {/* Background Elements */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 -left-20 w-96 h-96 bg-violet-600/15 rounded-full blur-[120px]"></div>
+      <div className="absolute bottom-20 -right-20 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px]"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700 border border-gray-200/50 mb-6">
-            🚀 My work
-          </div>
-          <h2 className="text-5xl sm:text-6xl font-bold mb-6">
+        <div className="text-center mb-16">
+          <p className="text-sm font-semibold tracking-widest text-violet-400 uppercase mb-3">
+            My work
+          </p>
+          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-5">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
             Here are some of my recent projects that showcase my skills and
-            passion for development
+            passion for development.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {projects
-            .filter((p) => p.featured)
-            .map((project, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="group glass glow-border rounded-3xl overflow-hidden flex flex-col"
+            >
               <div
-                key={index}
-                className="group bg-white/70 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl card-hover overflow-hidden border border-white/50 relative"
+                className={`h-52 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
               >
-                <div
-                  className={`h-64 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-300"></div>
-                  {project.image.endsWith(".png") ||
-                  project.image.endsWith(".jpg") ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  ) : (
-                    <span className="text-6xl">{project.image}</span>
-                  )}
+                {project.image.startsWith("/") ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <span className="text-7xl group-hover:scale-110 transition-transform duration-500">
+                    {project.image}
+                  </span>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07070b]/70 to-transparent"></div>
+              </div>
 
-                  <div className="absolute top-4 right-4">
-                    <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-semibold">
-                      Featured
-                    </div>
-                  </div>
+              <div className="p-7 flex flex-col flex-1">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-zinc-400 mb-5 leading-relaxed text-sm flex-1">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-white/5 text-zinc-300 rounded-full text-xs font-medium border border-white/10"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
 
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-50 text-gray-700 rounded-full text-sm font-medium border border-gray-200/50 hover:shadow-md transition-shadow duration-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
+                <div className="flex gap-3">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center py-3 px-5 text-white rounded-xl font-medium border border-white/15 hover:bg-white/10 transition-all duration-300"
+                  >
+                    GitHub
+                  </a>
+                  {project.live !== "#" && (
                     <a
-                      href={project.github}
-                      className="flex-1 text-center py-3 px-6 bg-white text-gray-800 rounded-xl font-medium border border-gray-200 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center py-3 px-5 bg-gradient-to-r from-violet-500 to-cyan-400 text-[#07070b] rounded-xl font-bold hover:shadow-[0_0_30px_-5px_rgba(139,92,246,0.8)] transition-all duration-300"
                     >
-                      GitHub
+                      Live Demo
                     </a>
-
-                    <a
-  href={project.live}
-  className="flex-1 text-center py-3 px-6 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-all duration-300"
->
-  Live Demo
-</a>
-
-                  </div>
+                  )}
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>
