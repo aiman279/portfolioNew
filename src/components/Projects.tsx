@@ -6,7 +6,7 @@ const projects = [
     description:
       "A booking system for barbershops. Customers pick a service, barber and free time slot, and the shop manages bookings and services from an admin dashboard.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    image: "✂️",
+    image: "/barberbook.png",
     github: "https://github.com/aiman279/barberbook",
     live: "#",
   },
