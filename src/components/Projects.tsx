@@ -1,39 +1,6 @@
 const Projects = () => {
   const projects = [
     {
-      title: "ATLAS (NORTH OS)",
-      description:
-        "Built an AI-powered personal life operating system to track life balance, goals, knowledge and yearly evolution in one place.",
-      tech: ["React", "TypeScript", "Vite", "Framer Motion"],
-      image: "🧭",
-      gradient: "from-indigo-500 to-blue-500",
-      github: "https://github.com/aiman279/atlas",
-      live: "https://atlas-orcin-beta.vercel.app",
-      featured: true,
-    },
-    {
-      title: "ASMU'I VAULT",
-      description:
-        "Built a minimalist installable (PWA) money tracker with income, expenses, savings goals and a dedicated Grab earnings tracker.",
-      tech: ["React", "TypeScript", "Vite", "PWA"],
-      image: "💰",
-      gradient: "from-emerald-500 to-teal-500",
-      github: "https://github.com/aiman279/asmui-vault",
-      live: "https://asmui-vault-three.vercel.app",
-      featured: true,
-    },
-    {
-      title: "LIFEFLOW",
-      description:
-        "Built a full-stack personal operating system for schedules, routines and reminders, with browser push notifications and weekly review insights.",
-      tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "PWA"],
-      image: "⏰",
-      gradient: "from-orange-500 to-rose-500",
-      github: "https://github.com/aiman279/lifeflow",
-      live: "#",
-      featured: true,
-    },
-    {
       title: "BOOKITSPORTS (FYP Project)",
       description:
         "Developed a responsive web and mobile application to streamline booking and management of sports facilities.",
@@ -56,14 +23,14 @@ const Projects = () => {
       featured: true,
     },
     {
-      title: "TASK LOVE",
+      title: "BARBERBOOK",
       description:
-        "Built a responsive web application using React.js for managing personal and team tasks.",
-      tech: ["React", "Firebase", "Tailwind CSS"],
-      image: "/task-management.png",
-      gradient: "from-purple-500 to-pink-500",
-      github: "https://github.com/aiman279/Task-Management",
-      live: "#",
+        "Built an online booking demo for barbershops: customers pick a service, barber and free time slot, and the shop manages bookings and services from an admin dashboard.",
+      tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      image: "✂️",
+      gradient: "from-amber-500 to-orange-500",
+      github: "https://github.com/aiman279/barberbook",
+      live: "https://barberbook-omega-nine.vercel.app",
       featured: true,
     },
   ];
