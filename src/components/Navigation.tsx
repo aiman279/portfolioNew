@@ -50,7 +50,7 @@ const Navigation = () => {
           onClick={() => go("home")}
           className="flex items-center gap-2 text-lg font-semibold text-white"
         >
-          <span className="font-mono-code text-teal">&lt;/&gt;</span> Aiman
+          <img src="/logo.svg" alt="Logo" className="h-8 w-8" /> Aiman
         </button>
 
         <div className="hidden md:flex items-center gap-8">
