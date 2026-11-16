@@ -92,21 +92,14 @@ const Projects = () => {
           A few things I've built recently.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => {
-            const featured = Boolean(p.video);
             return (
               <article
                 key={p.title}
-                className={`teal-card p-4 flex flex-col gap-5 ${
-                  featured ? "md:col-span-2 md:flex-row md:items-center" : ""
-                }`}
+                className="teal-card p-4 flex flex-col gap-5"
               >
-                <div
-                  className={`rounded-xl overflow-hidden bg-[#23272c] aspect-video flex items-center justify-center ${
-                    featured ? "md:w-3/5 shrink-0" : ""
-                  }`}
-                >
+                <div className="rounded-xl overflow-hidden bg-[#23272c] aspect-video flex items-center justify-center">
                   {p.video ? (
                     <AutoVideo src={p.video} poster={p.image} title={p.title} />
                   ) : p.image.startsWith("/") ? (
@@ -120,7 +113,7 @@ const Projects = () => {
                   )}
                 </div>
 
-                <div className="flex flex-col min-w-0 md:flex-1">
+                <div className="flex flex-col min-w-0 flex-1">
                   <h3 className="text-lg font-semibold text-white mb-1">
                     {p.title}
                   </h3>
