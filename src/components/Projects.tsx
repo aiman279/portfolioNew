@@ -8,7 +8,7 @@ const projects = [
       "A booking system for barbershops. Customers pick a service, barber and free time slot, and the shop manages bookings and services from an admin dashboard.",
     tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     image: "/barberbook.png",
-    video: "/barberbook-promo.mp4",
+    video: "/barberbook-portfolio.mp4",
     github: "https://github.com/aiman279/barberbook",
     live: "https://barberbook-omega-nine.vercel.app",
   },
@@ -32,7 +32,9 @@ const projects = [
   },
 ];
 
-// Plays a muted looping clip while it is on screen and pauses it otherwise.
+// Plays a looping clip while it is on screen and pauses it otherwise.
+// It always starts muted (browsers only allow autoplay that way); the native
+// controls let visitors turn the sound on themselves.
 // The poster image shows until the video loads, or if it cannot load.
 const AutoVideo = ({
   src,
@@ -50,10 +52,7 @@ const AutoVideo = ({
     if (!video) return;
 
     // Respect reduced-motion: do not autoplay, let the visitor press play.
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      video.controls = true;
-      return;
-    }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -73,6 +72,7 @@ const AutoVideo = ({
       poster={poster}
       muted
       loop
+      controls
       playsInline
       preload="none"
       aria-label={`${title} demo video`}
