@@ -21,7 +21,7 @@ React 19, TypeScript ~5.8, Vite 7, Tailwind CSS 4, React Router 7, TanStack Quer
 - Reuse shadcn primitives in `src/components/ui/`. Follow existing patterns; no new dependencies without approval.
 
 ## Deployment
-No deployment config in the repo. Do not deploy without approval.
+Live at https://portfolio-new-peach-chi.vercel.app (from the GitHub repo homepage). Deploy only when the owner explicitly asks; that request counts as approval.
 
 ## Repository
 Own Git repo, remote `origin` on GitHub. No `.env` files present.
