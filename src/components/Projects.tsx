@@ -106,7 +106,7 @@ const Projects = () => {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   ) : (
                     <span className="text-5xl">{p.image}</span>

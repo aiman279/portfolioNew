@@ -1,9 +1,9 @@
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 
 const stats = [
-  { n: "6", label: "Projects built" },
+  { n: "3", label: "Projects built" },
   { n: "10", label: "Core technologies" },
-  { n: "2", label: "Live apps" },
+  { n: "1", label: "Live app" },
 ];
 
 const Hero = () => {
