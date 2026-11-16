@@ -7,9 +7,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark;
+  color: #d7dde3;
+  background-color: #16181b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -87,7 +87,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
-npm dlx shadcn@latest add tooltip
 .dark {
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
@@ -127,7 +126,69 @@ npm dlx shadcn@latest add tooltip
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+  body {
+    background-color: #16181b;
+    color: #d7dde3;
+    font-family: "Poppins", system-ui, sans-serif;
+  }
+  ::selection {
+    background: #2ee6b6;
+    color: #0b1512;
+  }
+}
+
+/* ---- Dev / teal style ---- */
+.font-mono-code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+.text-teal {
+  color: #2ee6b6;
+}
+
+.bg-topo {
+  background-image: url("/topo.svg");
+  background-size: 900px 900px;
+  background-position: center;
+}
+
+.teal-card {
+  background: #1c1f23;
+  border: 1px solid rgb(46 230 182 / 0.35);
+  border-radius: 1.25rem;
+  transition: border-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+.teal-card:hover {
+  border-color: #2ee6b6;
+  box-shadow: 0 0 30px -10px rgb(46 230 182 / 0.55);
+}
+
+.btn-teal {
+  border: 1.5px solid #2ee6b6;
+  color: #2ee6b6;
+  border-radius: 9999px;
+  padding: 0.7rem 1.75rem;
+  font-weight: 500;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+.btn-teal:hover {
+  background: #2ee6b6;
+  color: #0b1512;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.9s ease-out both;
 }

@@ -1,132 +1,122 @@
+import { ArrowUpRight } from "lucide-react";
+
+const projects = [
+  {
+    title: "BarberBook",
+    description:
+      "A booking system for barbershops. Customers pick a service, barber and free time slot, and the shop manages bookings and services from an admin dashboard.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    image: "/barberbook.png",
+    github: "https://github.com/aiman279/barberbook",
+    live: "#",
+  },
+  {
+    title: "Atlas (North OS)",
+    description:
+      "An AI-powered personal life operating system to track life balance, goals, knowledge and yearly evolution in one place.",
+    tech: ["React", "TypeScript", "Vite", "Framer Motion"],
+    image: "🧭",
+    github: "https://github.com/aiman279/atlas",
+    live: "https://atlas-orcin-beta.vercel.app",
+  },
+  {
+    title: "Asmu'i Vault",
+    description:
+      "A minimalist installable (PWA) money tracker with income, expenses, savings goals and a dedicated Grab earnings tracker.",
+    tech: ["React", "TypeScript", "Vite", "PWA"],
+    image: "💰",
+    github: "https://github.com/aiman279/asmui-vault",
+    live: "https://asmui-vault-three.vercel.app",
+  },
+  {
+    title: "BookItSports (FYP)",
+    description:
+      "A responsive web and mobile application to streamline booking and management of sports facilities.",
+    tech: ["React", "Tailwind CSS", "Flutter (Dart)", "Firebase"],
+    image: "/booksports.png",
+    github: "https://github.com/aiman279/BOOKITSPORTS_FYP-WEB",
+    live: "#",
+  },
+  {
+    title: "Credit Transfer System",
+    description:
+      "A web-based system to manage and process student credit transfer requests between academic institutions.",
+    tech: ["PHP", "HTML", "CSS", "JavaScript", "SQL"],
+    image: "/transfer-system.png",
+    github: "https://github.com/aiman279/Credit_Transfer_System",
+    live: "#",
+  },
+  {
+    title: "Task Love",
+    description:
+      "A responsive web application using React.js for managing personal and team tasks.",
+    tech: ["React", "Firebase", "Tailwind CSS"],
+    image: "/task-management.png",
+    github: "https://github.com/aiman279/Task-Management",
+    live: "#",
+  },
+];
+
 const Projects = () => {
-  const projects = [
-    {
-      title: "BOOKITSPORTS (FYP Project)",
-      description:
-        "Developed a responsive web and mobile application to streamline booking and management of sports facilities.",
-      tech: ["React", "Tailwind CSS", "Flutter (Dart)", "Firebase"],
-      image: "/booksports.png",
-      gradient: "from-blue-500 to-cyan-500",
-      github: "https://github.com/aiman279/BOOKITSPORTS_FYP-WEB",
-      live: "#",
-      featured: true,
-    },
-    {
-      title: "CREDIT TRANSFER SYSTEM FOR UNIVERSITY",
-      description:
-        "Developed a web-based system to manage and process student credit transfer requests between academic institutions.",
-      tech: ["PHP", "HTML", "CSS", "JAVASCRIPT", "SQL"],
-      image: "/transfer-system.png",
-      gradient: "from-purple-500 to-pink-500",
-      github: "https://github.com/aiman279/Credit_Transfer_System",
-      live: "#",
-      featured: true,
-    },
-    {
-      title: "BARBERBOOK",
-      description:
-        "Built an online booking demo for barbershops: customers pick a service, barber and free time slot, and the shop manages bookings and services from an admin dashboard.",
-      tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-      image: "✂️",
-      gradient: "from-amber-500 to-orange-500",
-      github: "https://github.com/aiman279/barberbook",
-      live: "https://barberbook-omega-nine.vercel.app",
-      featured: true,
-    },
-  ];
-
   return (
-    <section
-      id="projects"
-      className="py-24 bg-gradient-to-br from-gray-50 via-blue-50/50 to-purple-50/50 relative overflow-hidden"
-    >
-      {/* Background Elements */}
-      <div className="absolute top-20 left-0 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-0 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-400/10 rounded-full blur-3xl"></div>
+    <section id="projects" className="py-24 bg-[#16181b]">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-center text-4xl sm:text-5xl font-light text-white mb-4">
+          Featured <span className="text-teal">Projects</span>
+        </h2>
+        <p className="text-center text-zinc-400 mb-14 max-w-xl mx-auto">
+          A few things I've built recently.
+        </p>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-purple-100 text-gray-700 border border-gray-200/50 mb-6">
-            🚀 My work
-          </div>
-          <h2 className="text-5xl sm:text-6xl font-bold mb-6">
-            Featured <span className="text-gradient">Projects</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Here are some of my recent projects that showcase my skills and
-            passion for development
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {projects.map((p) => (
+            <article key={p.title} className="teal-card p-4 flex gap-4">
+              <div className="w-28 sm:w-36 shrink-0 rounded-xl overflow-hidden bg-[#23272c] flex items-center justify-center">
+                {p.image.startsWith("/") ? (
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-5xl">{p.image}</span>
+                )}
+              </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {projects
-            .filter((p) => p.featured)
-            .map((project, index) => (
-              <div
-                key={index}
-                className="group bg-white/70 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-2xl card-hover overflow-hidden border border-white/50 relative"
-              >
-                <div
-                  className={`h-64 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-                >
-                  <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-300"></div>
-                  {project.image.endsWith(".png") ||
-                  project.image.endsWith(".jpg") ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  ) : (
-                    <span className="text-6xl">{project.image}</span>
-                  )}
-
-                  <div className="absolute top-4 right-4">
-                    <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-semibold">
-                      Featured
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-50 text-gray-700 rounded-full text-sm font-medium border border-gray-200/50 hover:shadow-md transition-shadow duration-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      className="flex-1 text-center py-3 px-6 bg-white text-gray-800 rounded-xl font-medium border border-gray-200 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300"
+              <div className="flex flex-col min-w-0">
+                <h3 className="text-lg font-semibold text-white mb-1">{p.title}</h3>
+                <p className="text-sm text-zinc-400 leading-relaxed mb-3">
+                  {p.description}
+                </p>
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {p.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-[11px] px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-zinc-300"
                     >
-                      GitHub
-                    </a>
-
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-auto flex items-center gap-5 text-sm font-medium">
+                  {p.live !== "#" && (
                     <a
-  href={project.live}
-  className="flex-1 text-center py-3 px-6 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition-all duration-300"
->
-  Live Demo
-</a>
-
-                  </div>
+                      href={p.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-teal hover:underline"
+                    >
+                      Live demo <ArrowUpRight size={15} />
+                    </a>
+                  )}
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-zinc-300 hover:text-white"
+                  >
+                    GitHub <ArrowUpRight size={15} />
+                  </a>
                 </div>
               </div>
-            ))}
+            </article>
+          ))}
         </div>
       </div>
     </section>

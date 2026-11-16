@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Cartoon avatar of Aiman">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14403a"/>
+      <stop offset="1" stop-color="#1c2328"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#2ee6b6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2ee6b6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect width="400" height="400" fill="url(#glow)"/>
+
+  <!-- Shirt -->
+  <path d="M30 400 C30 338 96 308 160 298 L240 298 C304 308 370 338 370 400 Z" fill="#a9b0f0"/>
+  <path d="M30 400 C30 352 60 326 100 312 L100 400 Z" fill="#9aa1e6" opacity="0.6"/>
+
+  <!-- Neck -->
+  <path d="M171 236 L171 312 Q200 338 229 312 L229 236 Z" fill="#c78a5f"/>
+  <path d="M171 270 Q200 296 229 270 L229 236 L171 236 Z" fill="#b97c53" opacity="0.55"/>
+
+  <!-- Collar -->
+  <path d="M160 298 L200 346 L174 360 L134 318 Z" fill="#9097e0" stroke="#7a81cf" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M240 298 L200 346 L226 360 L266 318 Z" fill="#9097e0" stroke="#7a81cf" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Placket and buttons -->
+  <path d="M200 346 L200 400" stroke="#8189d6" stroke-width="3"/>
+  <circle cx="200" cy="372" r="3.5" fill="#e6e9ff"/>
+  <circle cx="200" cy="394" r="3.5" fill="#e6e9ff"/>
+  <!-- Pockets -->
+  <path d="M96 366 L168 366 L168 400 L96 400 Z" fill="none"/>
+  <path d="M100 364 L166 364 L166 384 L133 396 L100 384 Z" fill="#9aa1ea" stroke="#858cd6" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="133" cy="385" r="3" fill="#e6e9ff"/>
+  <path d="M300 364 L234 364 L234 384 L267 396 L300 384 Z" fill="#9aa1ea" stroke="#858cd6" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="267" cy="385" r="3" fill="#e6e9ff"/>
+
+  <!-- Ears -->
+  <ellipse cx="121" cy="188" rx="12" ry="19" fill="#d79f72"/>
+  <ellipse cx="121" cy="189" rx="6" ry="11" fill="#c18560"/>
+  <ellipse cx="279" cy="188" rx="12" ry="19" fill="#d79f72"/>
+  <ellipse cx="279" cy="189" rx="6" ry="11" fill="#c18560"/>
+
+  <!-- Head -->
+  <path d="M122 170 C122 110 160 92 200 92 C240 92 278 110 278 170 C278 226 246 270 200 274 C154 270 122 226 122 170 Z" fill="#d9a276"/>
+
+  <!-- Hair -->
+  <path d="M114 176 C100 104 140 52 206 52 C270 52 304 102 286 176 C284 142 272 114 252 100 C222 124 182 124 152 104 C132 116 118 144 114 176 Z" fill="#15151a"/>
+  <path d="M146 84 C176 62 232 60 262 90" fill="none" stroke="#33333d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M168 74 C192 66 222 66 244 76" fill="none" stroke="#2a2a33" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Eyebrows -->
+  <path d="M148 160 Q166 148 187 158" fill="none" stroke="#15151a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M213 158 Q234 148 252 160" fill="none" stroke="#15151a" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <ellipse cx="168" cy="181" rx="8" ry="5.5" fill="#1b1210"/>
+  <ellipse cx="232" cy="181" rx="8" ry="5.5" fill="#1b1210"/>
+  <circle cx="171" cy="179" r="2" fill="#fff"/>
+  <circle cx="235" cy="179" r="2" fill="#fff"/>
+  <path d="M156 175 Q168 169 181 175" fill="none" stroke="#7a4a31" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M219 175 Q232 169 244 175" fill="none" stroke="#7a4a31" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Nose -->
+  <path d="M199 190 Q195 212 188 222 Q200 231 212 222 Q205 212 201 190" fill="none" stroke="#b97c53" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Cheeks -->
+  <ellipse cx="148" cy="226" rx="16" ry="10" fill="#e07a6a" opacity="0.18"/>
+  <ellipse cx="252" cy="226" rx="16" ry="10" fill="#e07a6a" opacity="0.18"/>
+
+  <!-- Smile -->
+  <path d="M172 242 Q200 264 228 242 Q200 250 172 242 Z" fill="#ffffff" stroke="#7a3f33" stroke-width="3" stroke-linejoin="round"/>
+</svg>

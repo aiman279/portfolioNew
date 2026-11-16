@@ -1,83 +1,97 @@
-import { FileText } from "lucide-react";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
+
+const stats = [
+  { n: "6", label: "Projects built" },
+  { n: "10", label: "Core technologies" },
+  { n: "2", label: "Live apps" },
+];
 
 const Hero = () => {
+  const go = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16"
+      className="relative min-h-screen flex items-center bg-topo pt-24 pb-16"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="animate-fade-in">
-          {/* Circular Profile Image */}
-          <div className="w-52 h-52 mx-auto mb-8 rounded-full ring-4 ring-border shadow-xl overflow-hidden">
-            <img
-              src="/aiman_asmui.jpg"
-              alt="Aiman Asmu'i"
-              className="w-full h-full object-cover"
-            />
+      <div className="max-w-6xl mx-auto px-6 w-full animate-fade-in">
+        <h1 className="text-center text-[clamp(3.5rem,11vw,8rem)] font-light leading-none tracking-tight text-white mb-14">
+          <span className="text-teal font-mono-code font-normal">&lt;</span>
+          Developer
+          <span className="text-teal font-mono-code font-normal">/&gt;</span>
+        </h1>
+
+        <div className="grid lg:grid-cols-12 gap-8 items-center">
+          {/* Profile card */}
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="teal-card p-5 w-72">
+              <div className="rounded-xl overflow-hidden bg-[#14403a] aspect-square mb-4">
+                <img
+                  src="/avatar.svg"
+                  alt="Aiman Asmu'i"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-white">Aiman Asmu'i</h3>
+              <p className="text-sm text-zinc-400 mb-4">
+                Full-Stack Web Developer
+              </p>
+              <div className="flex gap-2">
+                <a href="https://github.com/aiman279" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="p-2 rounded-lg border border-white/15 hover:border-[#2ee6b6] hover:text-teal transition-colors">
+                  <Github size={16} />
+                </a>
+                <a href="https://www.linkedin.com/in/aiman-asmui/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-2 rounded-lg border border-white/15 hover:border-[#2ee6b6] hover:text-teal transition-colors">
+                  <Linkedin size={16} />
+                </a>
+                <a href="mailto:aimanasmui332@gmail.com" aria-label="Email" className="p-2 rounded-lg border border-white/15 hover:border-[#2ee6b6] hover:text-teal transition-colors">
+                  <Mail size={16} />
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Heading */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Aiman Asmu'i
-            </span>
-          </h1>
-
-          <h1 className="text-2xl sm:text-3xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Software Engineering Student | Full Stack Developer
-          </h1>
-          <p className="text-xl sm:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            {" "}
-            I love creating clean, efficient code and turning complex ideas into
-            intuitive user experiences.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            {/* View My Work */}
-            <button
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
-            >
-              View My Work
-            </button>
-
-            {/* Get In Touch */}
-            <button
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="px-8 py-4 border-2 border-border text-foreground rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-200"
-            >
-              Get In Touch
-            </button>
-
-            {/* Resume Button */}
-            <a
-              href="/resume-aiman.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="flex items-center gap-2 px-6 py-4 border-2 border-border text-foreground rounded-full font-semibold hover:border-blue-600 hover:text-blue-600 hover:shadow-md hover:scale-105 transition-all duration-200"
-            >
-              <FileText className="w-5 h-5" />
-              View CV
-            </a>
+          {/* Intro */}
+          <div className="lg:col-span-5 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-5 rounded-full border border-[#2ee6b6]/40 text-sm text-teal">
+              <span className="w-2 h-2 rounded-full bg-[#2ee6b6] animate-pulse"></span>
+              Available for freelance projects
+            </div>
+            <p className="text-3xl sm:text-4xl font-semibold text-white leading-snug mb-4">
+              Hey, I'm <span className="text-teal">Aiman</span>,
+              <br />
+              Full-Stack Web Developer
+            </p>
+            <p className="text-zinc-400 leading-relaxed mb-8">
+              I build fast, clean websites and web apps for small businesses and
+              individuals, from first idea to launch.
+            </p>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+              <button onClick={() => go("contact")} className="btn-teal">
+                Get a quote
+              </button>
+              <a
+                href="/resume-aiman.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="inline-flex items-center gap-2 px-6 py-[0.7rem] rounded-full border border-white/20 text-zinc-200 hover:border-white/50 transition-colors"
+              >
+                <FileText size={16} /> View CV
+              </a>
+            </div>
           </div>
-        </div>
 
-        {/* Scroll Indicator */}
-        <div className="mt-16 animate-bounce">
-          <div className="w-8 h-8 border-2 border-border rounded-full mx-auto flex items-center justify-center">
-            <div className="w-2 h-2 bg-border rounded-full animate-pulse"></div>
+          {/* Stats */}
+          <div className="lg:col-span-3 grid grid-cols-3 lg:grid-cols-1 gap-4">
+            {stats.map((s) => (
+              <div key={s.label} className="teal-card px-5 py-4 flex items-center gap-4">
+                <span className="text-3xl font-semibold text-teal">{s.n}</span>
+                <span className="text-xs sm:text-sm text-zinc-300 leading-tight">
+                  {s.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
